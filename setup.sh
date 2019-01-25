@@ -57,8 +57,10 @@ rm -f database/database.sqlite
 echo 'creating database...'
 touch database/database.sqlite
 
-echo 'creating database...'
+fcho 'generating key...'
 php artisan key:generate
+
+echo 'running migrations...'
 php artisan migrate
 php artisan db:seed
 
